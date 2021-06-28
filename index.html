@@ -67,16 +67,18 @@
                                     <option value="Blue Leather">Blue Leather</option>
                                     <option value="Navy">Navy</option>
                                     <option value="Taupe Combi">Taupe Combi</option>
-                                    <option value="White">White OstrichPRT</option>
+                                    <option value="White OstrichPRT">White OstrichPRT</option>
                                     <option value="Brown">Brown</option>
+                                    <option value="Dusty Rose">Dusty Rose</option>
+                                    
                                 </select>
                             </div>
         
                             <!-- filter by Price -->
                             <div class="filters">
                                 <label for="size">Shoe Size: </label>
-                                <input id="spinner" class="spinnerClass" name='size' value="3">
-                                <input id="spinner2" class="spinnerClass" name='size' value="7">
+                                <input id="spinner" class="spinnerClass" name='size' value="All">
+                                <!-- <input id="spinner2" class="spinnerClass" name='size' value="7"> -->
                             </div>
                         </div>
                     </div>
@@ -150,7 +152,7 @@
                     "name"       :"Pure Tone Flat",
                     "gender"     :"Women",
                     "style"      :"Flat",
-                    "sizes"      :[4, 4.5, 5, 5.5, 6, 6.5, 7],
+                    "sizes"      :4,
                     "price"      :75.00,
                     "colour"     :"Black",
                     "description":"These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",            
@@ -163,7 +165,7 @@
                     "name"       :"Orinoco 2 Lace Boot",
                     "gender"     :"Women",
                     "style"      :"Boot",
-                    "sizes"      :[5, 6, 7],
+                    "sizes"      :5,
                     "price"      :89.00,
                     "colour"     :"Brown",
                     "description":"Refreshing our bestselling Orinoco profile, a lace-up ankle boot that stays all day wearable. The premium dark olive leather upper stays classic and crafted while the cleated sole with 3cm heel feels durable and adds grip. Perfect to step into the season with casual style.",
@@ -176,7 +178,7 @@
                     "name"       :"Orson Harbour Boat Shoe",
                     "gender"     :"Men",
                     "style"      :"Boat Shoe",
-                    "sizes"      :[ 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+                    "sizes"      : 7,
                     "price"      :85.00,
                     "colour"     :"Multicolour",
                     "description":"Orson Harbour, boat shoes, multicolour leather - Delivering the ultimate lifestyle boat shoe, Orson Harbour features a beautifully crafted leather with water and salt-resistant properties. The AquaDX technology delivers a clever water drainage system and the Rock rubber outsole has a microsiped tread pattern for maximum wet surface grip. Lightweight thanks to the EVA midsole, this style will endure any sailing adventure.",
@@ -186,12 +188,12 @@
                 {
                     "id"         :"shoe4",
                     "source"     :"https://www.clarks.co.uk/c/Pure-2-Mule/p/26156428",
-                    "name"       :"Pure 2 Mule White OstrichPRT",
+                    "name"       :"Pure 2 Mule ",
                     "gender"     :"Women",
                     'style'      :'Flat',
-                    "sizes"      :[3,4,5,6,7,8],
+                    "sizes"      :6,
                     "price"      :79.00,
-                    "colour"     :"White",
+                    "colour"     :"White OstrichPRT",
                     "description":"The latest addition to our Pure collection, the contemporary and chic Pure2 Mule has a tapered square toe in white ostrich print, enhanced by unique hardware trim. The super-slim sole and 1cm heel make it the perfect flat, and the breathable leather linings are ideal for barefoot wear. Cushion Plus™ technology delivers ultimate comfort.",
                     "picture"    :"images/shoe4_0.jpg",
                     "url"        :"shoes/shoe4.html"
@@ -199,10 +201,10 @@
                 {
                     "id"         :"shoe5",
                     "source"     :"https://www.clarks.co.uk/c/Hero-Lite-Lace/p/26157362",
-                    "name"       :"Hero Lite Lace Taupe Combi",
+                    "name"       :"Hero Lite Lace",
                     "gender"     :"Women",
                     'style'      :'Flat',
-                    "sizes"      :[3,4,4.5,5,5.5,6,6.5,8],
+                    "sizes"      :8,
                     "price"      :79.00,
                     "colour"     :"Taupe Combi",
                     "description":"The perfect everyday shoe, Hero Lite sees a mint suede Athleisure-inspired upper teamed with an XLExtraLight cupsole®. Enhancing the super-lightweight, comfortable feel is a removable Cushion Plus™ footbed for targeted underfoot comfort, plus padded collar. A crafted look that embraces Clarks DNA design codes, this flatform casual with its 4cm of height feels fresh, modern and stylish from day to night. Linings feature 18% recycled content, the cupsole 50%.",
@@ -215,7 +217,7 @@
                     "name"       :"Serena Paige Navy",
                     "gender"     :"Women",
                     'style'      :"Flat",
-                    "sizes"      :[3,4,4.5,5,5.5,6,7],
+                    "sizes"      :3,
                     "price"      :49.00,
                     "colour"     :"Navy",
                     "description":"With its sleek design lines in navy, an Ultimate Comfort cushioned footbed and a lightweight, grippy sole, the Serena Paige effortlessly transitions from spring to summer, making this distinctive profile a wardrobe essential.",
@@ -228,12 +230,25 @@
                     "name"       :"Roam Surf Toddler Mid ",
                     "gender"     :"Kids",
                     'style'      :'Sandal',
-                    "sizes"      :[4,4.5, 5,5.5,6,6.5,7],
+                    "sizes"      :7,
                     "price"      :36.00,
                     "colour"     :"Blue Leather",
                     "description":"A great looking sandal in soft mid blue leather, Roam Surf has double adjustable straps and padded collar for comfort in everyday summer adventures. Celebrating a more conscious choice, its leather linings are chrome-free to reduce chemical and water use when its made, and the grippy rubber sole and cushioned Eco Foam footbed feature recycled content.",
                     "picture"    :"images/shoe7_0.jpg",
                     "url"        :"shoes/shoe7.html"
+                },
+                {
+                    "id"         :"shoe8",
+                    "source"     :"https://www.clarks.co.uk/c/Roam-Surf-Toddler/p/26158061",
+                    "name"       :"Lafley Leah",
+                    "gender"     :"Women",
+                    'style'      :'Heel',
+                    "sizes"      :8,
+                    "price"      :55.00,
+                    "colour"     :"Dusty Rose",
+                    "description":"A wardrobe staple that you can dress up or down, these chunky wedge heels feature a rip-tape strap for a secure fit and easy on-off. Crafted from ultra-comfortable material, the stylish uppers are the perfect combination of form and function, while the rubber sole provides traction with every step.",
+                    "picture"    :"images/shoe8_0.jpg",
+                    "url"        :"shoes/shoe8.html"
                 }
             ]
         }

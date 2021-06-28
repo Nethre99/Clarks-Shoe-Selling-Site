@@ -8,7 +8,7 @@ $(function(){
 
 $(function(){
     $("#spinner").spinner({
-        min: 2,
+        min: 4,
         max: 15,
         spin: function(event, ui) {
 			$(this).change();
@@ -16,15 +16,15 @@ $(function(){
     });
 });
 
-$(function(){
-    $("#spinner2").spinner({
-        min: 2,
-        max: 15,
-        spin: function(event, ui) {
-			$(this).change();
-		}
-    });
-});
+// $(function(){
+//     $("#spinner2").spinner({
+//         min: 2,
+//         max: 15,
+//         spin: function(event, ui) {
+// 			$(this).change();
+// 		}
+//     });
+// });
 
 $(function(){
     $("#slider-range").slider({
@@ -63,8 +63,8 @@ $(function(){
         var colour = $("#colour").val();
         var priceMin = $("#slider-range").slider("option", "values")[0];
         var priceMax = $("#slider-range").slider("option", "values")[1];
-        var minSize =  $("#spinner").val();
-        var maxSize =  $("#spinner2").val();
+        var size =  $("#spinner").val();
+        // var maxSize =  $("#spinner2").val();
 
         // var content ='<div class="item">'
         var content= "<ul id='item'>";
@@ -73,8 +73,8 @@ $(function(){
             if(( typeGender == data.shoes[i].gender) || (typeGender=="Any"))
             if(( styleType == data.shoes[i].style) || (styleType=="Any"))
             if(( colour == data.shoes[i].colour) || (colour=="Any"))
-            // if (( minSize <= data.shoes[i].sizes[x] && maxSize >= data.shoes[i].sizes[x] ))
-            if(( data.shoes[i].price >= priceMin && data.shoes[i].price <= priceMax ))        //                 content += '<img src="'+data.shoes[i].picture+'" alt="'+data.shoes[i].id+'" class="itemImg"><div class="itemDes"><h2>'+data.shoes[i].name+'</h2><p>'+data.shoes[i].description+'</p><span>£ '+data.shoes[i].price+'</span></div>';
+            if ((size == data.shoes[i].sizes )|| (size == "All"))
+            if(( data.shoes[i].price >= priceMin && data.shoes[i].price <= priceMax ))       
             {
                 {
                     {
@@ -313,13 +313,7 @@ $(function(){
 $(function() {
     favList = JSON.parse(localStorage.getItem("fav"));
 
-    if (favList == null) {
-       
-        $(".clearLst").attr("hidden", true)
-    
-    }else{
-       
-        $(".clearLst").attr("hidden", false)
+    $(".clearLst").attr("hidden", false)
        
         $( ".clearLst" ).on("click", function(){
        
@@ -335,5 +329,30 @@ $(function() {
             console.log("localStorage cleared");
        
         });
-    }
+
+    // if (favList == null) {
+
+    //     $(".clearLst").attr("hidden", false)
+       
+    //     $( ".clearLst" ).on("click", function(){
+       
+    //         $(this).attr("hidden", true)
+       
+    //         $("#FavList").remove();
+    //         console.log("FavList removed");
+       
+    //         favList = JSON.parse(localStorage.getItem("fav"));
+       
+    //         console.log("localStorage clearing");
+    //         localStorage.clear();
+    //         console.log("localStorage cleared");
+       
+    //     });
+       
+        
+    
+    // }else{
+    //     $(".clearLst").attr("hidden", true)
+        
+    // }
 });
